@@ -8,7 +8,7 @@ const Header = () => {
     <header className={styles.header}>
       <Container className={styles.headerContainer}>
         <p className={styles.headerTitle}>
-          <SpotifyLogo /> Netligraph/Spotify
+          <SpotifyLogo /> Netligraph/Spotify Fran the dev rocks the world
         </p>
       </Container>
     </header>
