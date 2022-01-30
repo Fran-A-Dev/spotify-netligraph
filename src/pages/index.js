@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import { getSecrets } from "@netlify/functions";
 import Layout from "@components/Layout";
 import Container from "@components/Container";
 
@@ -23,9 +23,13 @@ export default function Home() {
 
         <ul className={styles.items}>
           <li>
-            <a href="https://www.blink182.com/">
-              <img width="280" src="/images/blink-182.jpg" alt="Artist Photo" />
-              <p className={styles.itemTitle}>blink-182</p>
+            <a href="https://www.thekillersmusic.com/">
+              <img
+                width="280"
+                src="/images/the-killers.jpg"
+                alt="Artist Photo"
+              />
+              <p className={styles.itemTitle}>The Killers</p>
             </a>
           </li>
           <li>
@@ -52,13 +56,13 @@ export default function Home() {
 
         <ul className={styles.items}>
           <li>
-            <a href="https://www.blink182.com/">
+            <a href="https://www.thekillersmusic.com/">
               <img
                 width="280"
-                src="/images/dude-ranch.jpg"
-                alt="Dude Ranch Album Cover"
+                src="/images/hot-fuss.jpg"
+                alt="Hot Fuss Album Cover"
               />
-              <p className={styles.itemTitle}>Enthused</p>
+              <p className={styles.itemTitle}>Mr. Brightside</p>
             </a>
           </li>
           <li>
@@ -95,4 +99,12 @@ export default function Home() {
       </Container>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const secrets = await getSecrets();
+
+  return {
+    props: {},
+  };
 }
