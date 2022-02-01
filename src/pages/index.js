@@ -103,6 +103,7 @@ export default function Home() {
 
 export async function getStaticProps() {
   const secrets = await getSecrets();
+  console.log("secrets.spotify", secrets.spotify);
 
   return {
     props: {},
